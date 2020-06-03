@@ -1,0 +1,34 @@
+# pipelines end with _pipeline.yaml sufix
+
+version: 1.1
+namespace: nspipe1
+name: pipeline1
+apps:
+  - name: app1
+    imagepath: path_to_cluster_docker_image
+    dockercontext: path_to_dockerfile
+    inputs:
+      - chanin1
+      - chanin2
+    outputs:
+      - chanout1
+      - chanout2
+    expose: 80
+    replicas: 1
+    env: 
+      VAR1: VALUE1
+      VAR2: VALUE2
+  - name: app2
+    imagepath: path_to_cluster_docker_image
+    dockercontext: path_to_dockerfile
+    inputs:
+      - chanin3
+      - chanin4
+    outputs:
+      - chanout5
+      - chanout6
+    expose: 88
+    replicas: 1
+    env: 
+      VAR3: VALUE3
+      VAR4: VALUE4

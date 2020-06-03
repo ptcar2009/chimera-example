@@ -1,0 +1,7 @@
+version: 1.1
+namespace: nspipe1
+channels:
+- name: chan1
+  avropath: .chimera/schemas/chan1.avsc
+- name: chan2
+  avropath: .chimera/schemas/chan1.avsc

@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "name": "chan1",
+    "fields": [
+        {
+            "name": "msg",
+            "type": "string"
+        }
+    ]
+}
