@@ -5,30 +5,20 @@ namespace: nspipe1
 name: pipeline1
 apps:
   - name: app1
-    imagepath: path_to_cluster_docker_image
-    dockercontext: path_to_dockerfile
-    inputs:
-      - chanin1
-      - chanin2
+    imagepath: gcr.io/red-inspr/chimera/example/app1
+    dockercontext: app1
     outputs:
-      - chanout1
-      - chanout2
+      - chan1
     expose: 80
+    replicas: 5
+  - name: app2
+    imagepath: gcr.io/red-inspr/chimera/example/app2
+    dockercontext: app2
+    inputs:
+      - chan1
+    outputs:
+      - chan2
     replicas: 1
     env: 
       VAR1: VALUE1
       VAR2: VALUE2
-  - name: app2
-    imagepath: path_to_cluster_docker_image
-    dockercontext: path_to_dockerfile
-    inputs:
-      - chanin3
-      - chanin4
-    outputs:
-      - chanout5
-      - chanout6
-    expose: 88
-    replicas: 1
-    env: 
-      VAR3: VALUE3
-      VAR4: VALUE4
