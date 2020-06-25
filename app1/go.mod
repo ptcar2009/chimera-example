@@ -1,4 +1,4 @@
-module gitlab.inspr.com/chimera/example-golang
+	module gitlab.inspr.com/chimera/example-golang
 
 go 1.14
 

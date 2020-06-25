@@ -11,6 +11,7 @@ apps:
       - chan1
     expose: 80
     replicas: 5
+    
   - name: app2
     imagepath: gcr.io/red-inspr/chimera/example/app2
     dockercontext: app2
